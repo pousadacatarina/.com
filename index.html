@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pousada Catarina - Refúgio de Paz</title>
-    <meta name="description" content="Descubra a Pousada Catarina, um refúgio de paz e conforto em meio à natureza. Reserve agora e desfrute de uma experiência única.">
-    <meta name="keywords" content="Pousada Catarina, reserva de hotel, acomodações, natureza, conforto, tranquilidade">
+    <title>Pousada Catarina - Luxo e Sofisticação</title>
+    <meta name="description" content="Descubra a Pousada Catarina, um refúgio de luxo e tranquilidade em meio à natureza. Reserve agora e desfrute de uma experiência única.">
+    <meta name="keywords" content="Pousada Catarina, luxo, natureza, conforto, tranquilidade">
     <style>
         /* Reset básico */
         * {
@@ -16,58 +16,129 @@
 
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: #f0f8ff; /* Azul claro */
-            color: #333;
+            background-color: #0a192f; /* Azul-marinho */
+            color: #ccd6f6;
             line-height: 1.6;
             overflow-x: hidden;
             position: relative;
         }
 
-        /* Efeito de borda de plantas */
-        body::before {
-            content: '';
+        /* Imagem de fundo animada */
+        .background-animation {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: url('https://www.pixelstalk.net/wp-content/uploads/2016/06/Nature-Wallpaper.jpg') repeat-y;
-            background-size: contain;
-            z-index: -1;
-            pointer-events: none;
-            animation: sway 6s infinite ease-in-out;
+            background: url('https://i.ibb.co/2fR0g0h/Leonardo-Phoenix-10-Crie-um-fundo-deslumbrante-inspirado-na-na-3.jpg') no-repeat center center/cover;
+            z-index: -2;
+            animation: moveBackground 20s linear infinite;
         }
 
-        @keyframes sway {
-            0%, 100% { transform: translateX(0); }
-            50% { transform: translateX(-10px); }
+        @keyframes moveBackground {
+            0% { transform: translateX(0); }
+            50% { transform: translateX(-10%); }
+            100% { transform: translateX(0); }
         }
 
         /* Fontes personalizadas */
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght@700&family=Montserrat:wght@700&display=swap');
 
         header {
-            background-color: rgba(0, 119, 182, 0.8); /* Azul mais escuro com transparência */
-            color: white;
-            padding: 100px 20px;
+            position: relative;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             text-align: center;
-            backdrop-filter: blur(10px); /* Efeito glassmorphism */
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-            border-radius: 15px;
-            margin: 20px;
+            color: white;
+            overflow: hidden;
         }
 
+        /* Título Sofisticado */
         header h1 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 4.5em;
+            font-family: 'Playfair Display', serif;
+            font-size: 6em;
             font-weight: 700;
-            letter-spacing: 3px;
-            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #64ffda; /* Azul claro */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            position: relative;
+            animation: subtleFadeIn 2s ease-in-out;
+        }
+
+        header h1::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60%;
+            height: 4px;
+            background-color: #64ffda; /* Azul claro */
+            border-radius: 2px;
+        }
+
+        @keyframes subtleFadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Navbar */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(10, 25, 47, 0.9);
+            backdrop-filter: blur(10px);
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        nav a {
+            color: #64ffda; /* Azul claro */
+            text-decoration: none;
+            font-weight: 600;
+            margin: 0 15px;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: rgba(100, 255, 218, 0.1); /* Azul claro com transparência */
+            transform: translateY(-3px);
+        }
+
+        /* Seção Hero */
+        .hero {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            overflow: hidden;
+        }
+
+        .hero h2 {
+            font-size: 4em;
+            font-weight: 700;
+            margin-bottom: 20px;
             animation: fadeIn 2s ease-in-out;
-            background: linear-gradient(45deg, #0077b6, #00b4d8, #90e0ef, #caf0f8); /* Gradiente mais colorido */
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5); /* Sombra mais destacada */
+        }
+
+        .hero p {
+            font-size: 1.5em;
+            max-width: 800px;
+            margin: 0 auto;
+            animation: fadeIn 3s ease-in-out;
         }
 
         @keyframes fadeIn {
@@ -75,69 +146,37 @@
             to { opacity: 1; }
         }
 
-        nav {
-            display: flex;
-            justify-content: center;
-            background-color: rgba(2, 62, 138, 0.8); /* Azul escuro com transparência */
-            padding: 15px;
-            backdrop-filter: blur(10px); /* Efeito glassmorphism */
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            border-radius: 15px;
-            margin: 20px;
-        }
-
-        nav a {
-            color: white;
-            padding: 15px 25px;
-            text-decoration: none;
-            text-transform: uppercase;
-            font-weight: 600;
-            transition: background-color 0.3s ease, transform 0.3s ease;
-        }
-
-        nav a:hover {
-            background-color: rgba(3, 4, 94, 0.8); /* Azul mais escuro com transparência */
-            transform: translateY(-3px);
-        }
-
-        .parallax {
-            background-image: url('https://i.ibb.co/NdbgF8bz/Leonardo-Phoenix-10-Create-a-luxurious-and-modern-3-D-logo-for-0.jpg');
-            min-height: 500px; /* Altura reduzida para celular */
-            background-attachment: fixed;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover; /* Garante que a imagem cubra toda a área */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 15px;
-            margin: 20px;
-        }
-
-        /* Galeria Interativa */
+        /* Galeria Moderna */
         .gallery {
+            padding: 100px 20px;
+            background-color: rgba(17, 34, 64, 0.9);
+            backdrop-filter: blur(10px);
+            text-align: center;
+        }
+
+        .gallery h2 {
+            font-size: 3.5em;
+            font-weight: 700;
+            margin-bottom: 50px;
+            color: #64ffda; /* Azul claro */
+        }
+
+        .gallery-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 20px;
-            padding: 60px 20px;
-            background-color: rgba(255, 255, 255, 0.8); /* Fundo branco com transparência */
-            backdrop-filter: blur(10px); /* Efeito glassmorphism */
-            border-radius: 15px;
-            margin: 20px;
+            padding: 0 20px;
         }
 
-        .gallery img {
+        .gallery-grid img {
             width: 100%;
             border-radius: 15px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-            transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
             cursor: pointer;
         }
 
-        .gallery img:hover {
+        .gallery-grid img:hover {
             transform: scale(1.05);
             box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
         }
@@ -150,7 +189,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0, 0, 0, 0.8);
+            background-color: rgba(0, 0, 0, 0.9);
             z-index: 1000;
             justify-content: center;
             align-items: center;
@@ -168,37 +207,32 @@
 
         /* Sobre a Pousada */
         .about {
-            padding: 80px 20px;
-            background-color: rgba(255, 255, 255, 0.8); /* Fundo branco com transparência */
-            backdrop-filter: blur(10px); /* Efeito glassmorphism */
-            border-radius: 15px;
-            margin: 20px;
+            padding: 100px 20px;
+            background-color: rgba(17, 34, 64, 0.9);
+            backdrop-filter: blur(10px);
+            text-align: center;
         }
 
         .about h2 {
-            font-family: 'Montserrat', sans-serif;
             font-size: 3.5em;
             font-weight: 700;
             margin-bottom: 30px;
-            color: #023e8a;
-            text-align: center;
-            background: linear-gradient(45deg, #0077b6, #023e8a);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+            color: #64ffda; /* Azul claro */
         }
 
         .about p {
-            font-size: 1.1em;
-            color: #555;
+            font-size: 1.2em;
+            max-width: 800px;
+            margin: 0 auto 20px;
+            color: #ccd6f6;
+            text-align: justify;
             line-height: 1.8;
-            margin-bottom: 20px;
         }
 
         .about a.btn {
             display: inline-block;
-            background-color: #023e8a;
-            color: white;
+            background-color: #64ffda; /* Azul claro */
+            color: #0a192f;
             padding: 15px 30px;
             text-decoration: none;
             border-radius: 5px;
@@ -207,43 +241,36 @@
         }
 
         .about a.btn:hover {
-            background-color: #03045e;
+            background-color: #00b4d8; /* Azul mais escuro */
         }
 
         /* Depoimentos */
         .testimonials {
-            padding: 80px 20px;
-            background-color: rgba(255, 255, 255, 0.8); /* Fundo branco com transparência */
-            backdrop-filter: blur(10px); /* Efeito glassmorphism */
+            padding: 100px 20px;
+            background-color: rgba(10, 25, 47, 0.9);
+            backdrop-filter: blur(10px);
             text-align: center;
-            border-radius: 15px;
-            margin: 20px;
         }
 
         .testimonials h2 {
-            font-family: 'Montserrat', sans-serif;
             font-size: 3.5em;
             font-weight: 700;
-            margin-bottom: 30px;
-            color: #023e8a;
-            background: linear-gradient(45deg, #0077b6, #023e8a);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+            margin-bottom: 50px;
+            color: #64ffda; /* Azul claro */
         }
 
         .testimonial {
             max-width: 800px;
             margin: 0 auto 40px;
             padding: 20px;
-            background-color: rgba(249, 249, 249, 0.9); /* Fundo claro com transparência */
+            background-color: rgba(17, 34, 64, 0.9);
             border-radius: 15px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
         }
 
         .testimonial p {
             font-size: 1.1em;
-            color: #555;
+            color: #ccd6f6;
             line-height: 1.8;
         }
 
@@ -251,29 +278,22 @@
             display: block;
             margin-top: 10px;
             font-weight: 600;
-            color: #0077b6;
+            color: #64ffda; /* Azul claro */
         }
 
         /* Mapa de Localização */
         .map {
-            padding: 60px 20px;
-            background-color: rgba(202, 240, 248, 0.8); /* Azul muito claro com transparência */
-            backdrop-filter: blur(10px); /* Efeito glassmorphism */
+            padding: 100px 20px;
+            background-color: rgba(17, 34, 64, 0.9);
+            backdrop-filter: blur(10px);
             text-align: center;
-            border-radius: 15px;
-            margin: 20px;
         }
 
         .map h2 {
-            font-family: 'Montserrat', sans-serif;
             font-size: 3.5em;
             font-weight: 700;
-            margin-bottom: 30px;
-            color: #023e8a;
-            background: linear-gradient(45deg, #0077b6, #023e8a);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+            margin-bottom: 50px;
+            color: #64ffda; /* Azul claro */
         }
 
         .map iframe {
@@ -287,24 +307,17 @@
 
         /* Formulário de Reserva */
         .reservation {
-            padding: 80px 20px;
-            background-color: rgba(255, 255, 255, 0.8); /* Fundo branco com transparência */
-            backdrop-filter: blur(10px); /* Efeito glassmorphism */
+            padding: 100px 20px;
+            background-color: rgba(10, 25, 47, 0.9);
+            backdrop-filter: blur(10px);
             text-align: center;
-            border-radius: 15px;
-            margin: 20px;
         }
 
         .reservation h2 {
-            font-family: 'Montserrat', sans-serif;
             font-size: 3.5em;
             font-weight: 700;
-            margin-bottom: 30px;
-            color: #023e8a;
-            background: linear-gradient(45deg, #0077b6, #023e8a);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+            margin-bottom: 50px;
+            color: #64ffda; /* Azul claro */
         }
 
         .reservation form {
@@ -322,12 +335,13 @@
             border-radius: 5px;
             border: 1px solid #ccc;
             font-size: 1em;
-            background-color: rgba(255, 255, 255, 0.9); /* Fundo branco com transparência */
+            background-color: rgba(255, 255, 255, 0.1);
+            color: #ccd6f6;
         }
 
         .reservation button {
-            background-color: #023e8a;
-            color: white;
+            background-color: #64ffda; /* Azul claro */
+            color: #0a192f;
             padding: 15px;
             border: none;
             border-radius: 5px;
@@ -337,112 +351,79 @@
         }
 
         .reservation button:hover {
-            background-color: #03045e;
+            background-color: #00b4d8; /* Azul mais escuro */
         }
 
-        /* Contato */
-        .contact {
-            padding: 80px 20px;
-            background-color: rgba(255, 255, 255, 0.8); /* Fundo branco com transparência */
-            backdrop-filter: blur(10px); /* Efeito glassmorphism */
-            text-align: center;
-            border-radius: 15px;
-            margin: 20px;
+        /* Botões de Contato */
+        .contact-buttons {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: flex;
+            gap: 10px;
+            z-index: 1000;
         }
 
-        .contact h2 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 3.5em;
-            font-weight: 700;
-            margin-bottom: 30px;
-            color: #023e8a;
-            background: linear-gradient(45deg, #0077b6, #023e8a);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+        .contact-buttons a {
+            display: inline-block;
+            background-color: #64ffda; /* Azul claro */
+            color: #0a192f;
+            padding: 15px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1em;
+            transition: background-color 0.3s ease;
         }
 
-        .contact p {
-            font-size: 1.1em;
-            color: #555;
-            line-height: 1.8;
-            margin-bottom: 20px;
+        .contact-buttons a:hover {
+            background-color: #00b4d8; /* Azul mais escuro */
         }
 
-        .contact img {
-            width: 80px; /* Tamanho reduzido */
-            height: auto;
-            margin: 10px;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-            transition: transform 0.3s ease;
-        }
-
-        .contact img:hover {
-            transform: scale(1.1); /* Efeito de zoom ao passar o mouse */
-        }
-
+        /* Footer */
         footer {
-            background-color: rgba(0, 0, 0, 0.8); /* Preto com transparência */
-            color: white;
+            background-color: rgba(10, 25, 47, 0.9);
+            backdrop-filter: blur(10px);
+            color: #64ffda; /* Azul claro */
             text-align: center;
             padding: 30px;
             font-size: 1em;
-            backdrop-filter: blur(10px); /* Efeito glassmorphism */
-            border-radius: 15px;
-            margin: 20px;
         }
 
         footer p {
             margin: 0;
         }
-
-        /* Responsividade para celular */
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 3em; /* Reduzi o tamanho do título no celular */
-            }
-
-            .parallax {
-                min-height: 300px; /* Altura ainda menor para celular */
-            }
-
-            nav a {
-                padding: 10px 15px; /* Ajuste no padding dos links */
-            }
-
-            .gallery {
-                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Galeria mais compacta */
-            }
-
-            .reservation form {
-                padding: 0 20px; /* Ajuste no formulário */
-            }
-        }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Pousada Catarina</h1>
-    </header>
+    <div class="background-animation"></div>
     <nav>
         <a href="#home">Home</a>
         <a href="#about">Sobre</a>
+        <a href="#gallery">Galeria</a>
         <a href="#testimonials">Depoimentos</a>
         <a href="#reservation">Reservas</a>
         <a href="#contact">Contato</a>
     </nav>
-    <div class="parallax">
-        <!-- Imagem de fundo sem texto -->
-    </div>
-    <div class="gallery" id="home">
-        <img src="https://i.ibb.co/NdbgF8bz/Leonardo-Phoenix-10-Create-a-luxurious-and-modern-3-D-logo-for-0.jpg" alt="Imagem 1">
-        <img src="https://imgcy.trivago.com/c_limit,d_dummy.jpeg,f_auto,h_1020,q_auto,w_2000/hotelier-images/cf/74/e44b21e73447cdf51bb0ec3c67f5ccfa855fd8e5fda14b9d58a275eec9be.jpeg" alt="Imagem 2">
-        <img src="https://i.ibb.co/YBG8Nv1t/Leonardo-Phoenix-10-Create-a-luxurious-and-modern-3-D-logo-for-1.jpg" alt="Imagem 3">
-        <img src="https://i.ibb.co/xwPwh4S/Leonardo-Phoenix-10-Create-a-luxurious-and-modern-3-D-logo-for-3.jpg" alt="Imagem 4">
-        <img src="https://imgcy.trivago.com/c_limit,d_dummy.jpeg,f_auto,h_1020,q_auto,w_2000/hotelier-images/96/8f/1e14332200078b24c1efc40b84a26b94e6ab94e95b1fa1fd7519aa1ba53a.jpeg" alt="Imagem 5">
-    </div>
-    <div class="about" id="about">
+    <header>
+        <h1>Pousada Catarina</h1>
+    </header>
+    <section class="hero" id="home">
+        <div>
+            <h2>Bem-vindo ao Refúgio de Luxo</h2>
+            <p>Descubra a beleza e a tranquilidade da Pousada Catarina, onde cada detalhe foi pensado para proporcionar a melhor experiência.</p>
+        </div>
+    </section>
+    <section class="gallery" id="gallery">
+        <h2>Galeria</h2>
+        <div class="gallery-grid">
+            <img src="https://i.ibb.co/NdbgF8bz/Leonardo-Phoenix-10-Create-a-luxurious-and-modern-3-D-logo-for-0.jpg" alt="Imagem 1">
+            <img src="https://imgcy.trivago.com/c_limit,d_dummy.jpeg,f_auto,h_1020,q_auto,w_2000/hotelier-images/cf/74/e44b21e73447cdf51bb0ec3c67f5ccfa855fd8e5fda14b9d58a275eec9be.jpeg" alt="Imagem 2">
+            <img src="https://i.ibb.co/YBG8Nv1t/Leonardo-Phoenix-10-Create-a-luxurious-and-modern-3-D-logo-for-1.jpg" alt="Imagem 3">
+            <img src="https://i.ibb.co/xwPwh4S/Leonardo-Phoenix-10-Create-a-luxurious-and-modern-3-D-logo-for-3.jpg" alt="Imagem 4">
+            <img src="https://imgcy.trivago.com/c_limit,d_dummy.jpeg,f_auto,h_1020,q_auto,w_2000/hotelier-images/96/8f/1e14332200078b24c1efc40b84a26b94e6ab94e95b1fa1fd7519aa1ba53a.jpeg" alt="Imagem 5">
+        </div>
+    </section>
+    <section class="about" id="about">
         <h2>Sobre a Pousada Catarina</h2>
         <p>A Pousada Catarina é um lugar ideal para todos os públicos, oferecendo conforto, segurança e um ambiente acolhedor. Nossos serviços são pensados para proporcionar a melhor experiência aos nossos hóspedes, com atenção aos detalhes e um atendimento personalizado.</p>
         <p>Localizada em uma das regiões mais belas do país, a pousada é perfeita para quem busca tranquilidade e contato com a natureza, sem abrir mão do conforto e da comodidade.</p>
@@ -451,8 +432,8 @@
         <p>Dispõe de quartos família. Todos os quartos incluem guarda-roupa, TV de tela plana, banheiro privativo, roupa de cama e toalhas.</p>
         <p>A Pousada Catarina fica a 14 km da Ponte Hercílio Luz e a 19 km da Praça da Alfândega. O aeroporto mais próximo é o Aeroporto Internacional de Florianópolis - Hercílio Luz, a 29 km da acomodação.</p>
         <a href="#reservation" class="btn">Reserve Agora</a>
-    </div>
-    <div class="testimonials" id="testimonials">
+    </section>
+    <section class="testimonials" id="testimonials">
         <h2>Depoimentos</h2>
         <div class="testimonial">
             <p>"A Pousada Catarina superou todas as nossas expectativas. O lugar é incrível, e o atendimento é impecável!"</p>
@@ -462,12 +443,12 @@
             <p>"Foi a melhor experiência da nossa vida. Recomendo a todos que buscam paz e conforto."</p>
             <span>— Carlos Mendes</span>
         </div>
-    </div>
-    <div class="map" id="map">
+    </section>
+    <section class="map" id="map">
         <h2>Localização</h2>
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3535.998346242673!2d-48.6567859!3d-27.5049317!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95274c39815b9e3f%3A0xf7aec2fb389210ee!2sPousada%20Catarina!5e0!3m2!1spt-BR!2sbr!4v1699999999999!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </div>
-    <div class="reservation" id="reservation">
+    </section>
+    <section class="reservation" id="reservation">
         <h2>Reservas</h2>
         <form action="#" method="post">
             <input type="text" placeholder="Seu Nome" required>
@@ -483,17 +464,10 @@
             <textarea placeholder="Mensagem Adicional" rows="4"></textarea>
             <button type="submit">Enviar Reserva</button>
         </form>
-    </div>
-    <div class="contact" id="contact">
-        <h2>Contato</h2>
-        <p>Reserve diretamente pelo Booking ou entre em contato conosco via WhatsApp.</p>
-        <a href="https://www.booking.com/hotel/br/pousada-amp-cafe-catarina.pt.html?tab=4&aid=1636199&label=hotel-3994181_reviews" target="_blank">
-            <img src="https://logos-marcas.com/wp-content/uploads/2021/08/Booking-Emblema.jpg" alt="Booking">
-        </a>
-        <a href="https://wa.me/5548996409053" target="_blank">
-            <img src="https://th.bing.com/th/id/OIP.HH-JtPc9IrqVx-LYrx6kbgHaHJ?rs=1&pid=ImgDetMain" alt="WhatsApp">
-        </a>
-        <p>Para mais informações, ligue para (48) 99640-9053 ou envie um e-mail para contato@pousadacatarina.com.br.</p>
+    </section>
+    <div class="contact-buttons">
+        <a href="https://www.booking.com/hotel/br/pousada-amp-cafe-catarina.pt.html?tab=4&aid=1636199&label=hotel-3994181_reviews" target="_blank">Booking</a>
+        <a href="https://wa.me/5548996409053" target="_blank">WhatsApp</a>
     </div>
     <footer>
         <p>© 2025 Pousada Catarina. Todos os direitos reservados.</p>
@@ -501,7 +475,7 @@
 
     <script>
         // Lightbox para a galeria
-        const images = document.querySelectorAll('.gallery img');
+        const images = document.querySelectorAll('.gallery-grid img');
         const lightbox = document.createElement('div');
         lightbox.classList.add('lightbox');
         document.body.appendChild(lightbox);
