@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pousada Catarina</title>
+    <title>Pousada Catarina - Refúgio de Paz</title>
+    <meta name="description" content="Descubra a Pousada Catarina, um refúgio de paz e conforto em meio à natureza. Reserve agora e desfrute de uma experiência única.">
+    <meta name="keywords" content="Pousada Catarina, reserva de hotel, acomodações, natureza, conforto, tranquilidade">
     <style>
         /* Reset básico */
         * {
@@ -17,17 +19,42 @@
             background-color: #f0f8ff; /* Azul claro */
             color: #333;
             line-height: 1.6;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Efeito de borda de plantas */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://www.pixelstalk.net/wp-content/uploads/2016/06/Nature-Wallpaper.jpg') repeat-y;
+            background-size: contain;
+            z-index: -1;
+            pointer-events: none;
+            animation: sway 6s infinite ease-in-out;
+        }
+
+        @keyframes sway {
+            0%, 100% { transform: translateX(0); }
+            50% { transform: translateX(-10px); }
         }
 
         /* Fontes personalizadas */
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap');
 
         header {
-            background-color: #0077b6; /* Azul mais escuro */
+            background-color: rgba(0, 119, 182, 0.8); /* Azul mais escuro com transparência */
             color: white;
             padding: 100px 20px;
             text-align: center;
+            backdrop-filter: blur(10px); /* Efeito glassmorphism */
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            border-radius: 15px;
+            margin: 20px;
         }
 
         header h1 {
@@ -47,12 +74,15 @@
         nav {
             display: flex;
             justify-content: center;
-            background-color: #023e8a; /* Azul escuro */
+            background-color: rgba(2, 62, 138, 0.8); /* Azul escuro com transparência */
             padding: 15px;
+            backdrop-filter: blur(10px); /* Efeito glassmorphism */
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
             position: sticky;
             top: 0;
             z-index: 1000;
+            border-radius: 15px;
+            margin: 20px;
         }
 
         nav a {
@@ -65,7 +95,7 @@
         }
 
         nav a:hover {
-            background-color: #03045e; /* Azul mais escuro */
+            background-color: rgba(3, 4, 94, 0.8); /* Azul mais escuro com transparência */
             transform: translateY(-3px);
         }
 
@@ -81,13 +111,17 @@
             justify-content: center;
             color: white;
             text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+            border-radius: 15px;
+            margin: 20px;
         }
 
         .parallax h2 {
-            font-size: 4.5em;
+            font-size: 5em; /* Aumentei o tamanho do texto */
             font-weight: 700;
             text-align: center;
             animation: fadeIn 2s ease-in-out;
+            -webkit-text-stroke: 2px white; /* Borda branca no texto */
+            color: white;
         }
 
         /* Galeria Interativa */
@@ -96,7 +130,10 @@
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 20px;
             padding: 60px 20px;
-            background-color: #ffffff;
+            background-color: rgba(255, 255, 255, 0.8); /* Fundo branco com transparência */
+            backdrop-filter: blur(10px); /* Efeito glassmorphism */
+            border-radius: 15px;
+            margin: 20px;
         }
 
         .gallery img {
@@ -136,11 +173,54 @@
             display: flex;
         }
 
+        /* Sobre a Pousada */
+        .about {
+            padding: 80px 20px;
+            background-color: rgba(255, 255, 255, 0.8); /* Fundo branco com transparência */
+            backdrop-filter: blur(10px); /* Efeito glassmorphism */
+            border-radius: 15px;
+            margin: 20px;
+        }
+
+        .about h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5em;
+            font-weight: 700;
+            margin-bottom: 30px;
+            color: #023e8a;
+            text-align: center;
+        }
+
+        .about p {
+            font-size: 1.1em;
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .about a.btn {
+            display: inline-block;
+            background-color: #023e8a;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.1em;
+            transition: background-color 0.3s ease;
+        }
+
+        .about a.btn:hover {
+            background-color: #03045e;
+        }
+
         /* Depoimentos */
         .testimonials {
             padding: 80px 20px;
-            background-color: #ffffff;
+            background-color: rgba(255, 255, 255, 0.8); /* Fundo branco com transparência */
+            backdrop-filter: blur(10px); /* Efeito glassmorphism */
             text-align: center;
+            border-radius: 15px;
+            margin: 20px;
         }
 
         .testimonials h2 {
@@ -155,7 +235,7 @@
             max-width: 800px;
             margin: 0 auto 40px;
             padding: 20px;
-            background-color: #f9f9f9;
+            background-color: rgba(249, 249, 249, 0.9); /* Fundo claro com transparência */
             border-radius: 15px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
         }
@@ -176,8 +256,11 @@
         /* Mapa de Localização */
         .map {
             padding: 60px 20px;
-            background-color: #caf0f8;
+            background-color: rgba(202, 240, 248, 0.8); /* Azul muito claro com transparência */
+            backdrop-filter: blur(10px); /* Efeito glassmorphism */
             text-align: center;
+            border-radius: 15px;
+            margin: 20px;
         }
 
         .map h2 {
@@ -200,8 +283,11 @@
         /* Formulário de Reserva */
         .reservation {
             padding: 80px 20px;
-            background-color: #ffffff;
+            background-color: rgba(255, 255, 255, 0.8); /* Fundo branco com transparência */
+            backdrop-filter: blur(10px); /* Efeito glassmorphism */
             text-align: center;
+            border-radius: 15px;
+            margin: 20px;
         }
 
         .reservation h2 {
@@ -227,6 +313,7 @@
             border-radius: 5px;
             border: 1px solid #ccc;
             font-size: 1em;
+            background-color: rgba(255, 255, 255, 0.9); /* Fundo branco com transparência */
         }
 
         .reservation button {
@@ -244,16 +331,73 @@
             background-color: #03045e;
         }
 
+        /* Contato */
+        .contact {
+            padding: 80px 20px;
+            background-color: rgba(255, 255, 255, 0.8); /* Fundo branco com transparência */
+            backdrop-filter: blur(10px); /* Efeito glassmorphism */
+            text-align: center;
+            border-radius: 15px;
+            margin: 20px;
+        }
+
+        .contact h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5em;
+            font-weight: 700;
+            margin-bottom: 30px;
+            color: #023e8a;
+        }
+
+        .contact p {
+            font-size: 1.1em;
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .contact img {
+            margin: 10px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+
         footer {
-            background-color: #000000; /* Preto */
+            background-color: rgba(0, 0, 0, 0.8); /* Preto com transparência */
             color: white;
             text-align: center;
             padding: 30px;
             font-size: 1em;
+            backdrop-filter: blur(10px); /* Efeito glassmorphism */
+            border-radius: 15px;
+            margin: 20px;
         }
 
         footer p {
             margin: 0;
+        }
+
+        /* Responsividade para celular */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 3em; /* Reduzi o tamanho do título no celular */
+            }
+
+            .parallax h2 {
+                font-size: 3.5em; /* Reduzi o tamanho do texto no celular */
+            }
+
+            nav a {
+                padding: 10px 15px; /* Ajuste no padding dos links */
+            }
+
+            .gallery {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Galeria mais compacta */
+            }
+
+            .reservation form {
+                padding: 0 20px; /* Ajuste no formulário */
+            }
         }
     </style>
 </head>
@@ -282,11 +426,10 @@
         <h2>Sobre a Pousada Catarina</h2>
         <p>A Pousada Catarina é um lugar ideal para todos os públicos, oferecendo conforto, segurança e um ambiente acolhedor. Nossos serviços são pensados para proporcionar a melhor experiência aos nossos hóspedes, com atenção aos detalhes e um atendimento personalizado.</p>
         <p>Localizada em uma das regiões mais belas do país, a pousada é perfeita para quem busca tranquilidade e contato com a natureza, sem abrir mão do conforto e da comodidade.</p>
-		</p>Situada em Biguaçu, a 25 km do Shopping Iguatemi Florianópolis e a 29 km do Floripa Shopping, a Pousada Catarina oferece acomodações com lounge compartilhado, Wi-Fi gratuito em todas as áreas e estacionamento privativo de cortesia.</p>
-		<p>A propriedade fica a cerca de 31 km da Ilha do Campeche, a 49 km da Estação Rodoviária de Itapema e a 12 km do Estádio Orlando Scarpelli. 
-		
-		<p>Dispõe de quartos família. Todos os quartos incluem guarda-roupa, TV de tela plana, banheiro privativo, roupa de cama e toalhas.
-		</p>A Pousada Catarina fica a 14 km da Ponte Hercílio Luz e a 19 km da Praça da Alfândega. O aeroporto mais próximo é o Aeroporto Internacional de Florianópolis - Hercílio Luz, a 29 km da acomodação.
+        <p>Situada em Biguaçu, a 25 km do Shopping Iguatemi Florianópolis e a 29 km do Floripa Shopping, a Pousada Catarina oferece acomodações com lounge compartilhado, Wi-Fi gratuito em todas as áreas e estacionamento privativo de cortesia.</p>
+        <p>A propriedade fica a cerca de 31 km da Ilha do Campeche, a 49 km da Estação Rodoviária de Itapema e a 12 km do Estádio Orlando Scarpelli.</p>
+        <p>Dispõe de quartos família. Todos os quartos incluem guarda-roupa, TV de tela plana, banheiro privativo, roupa de cama e toalhas.</p>
+        <p>A Pousada Catarina fica a 14 km da Ponte Hercílio Luz e a 19 km da Praça da Alfândega. O aeroporto mais próximo é o Aeroporto Internacional de Florianópolis - Hercílio Luz, a 29 km da acomodação.</p>
         <a href="#reservation" class="btn">Reserve Agora</a>
     </div>
     <div class="testimonials" id="testimonials">
