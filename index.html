@@ -384,9 +384,16 @@
         }
 
         .contact img {
+            width: 80px; /* Tamanho reduzido */
+            height: auto;
             margin: 10px;
             border-radius: 10px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .contact img:hover {
+            transform: scale(1.1); /* Efeito de zoom ao passar o mouse */
         }
 
         footer {
@@ -494,8 +501,12 @@
     <div class="contact" id="contact">
         <h2>Contato</h2>
         <p>Reserve diretamente pelo Booking ou entre em contato conosco via WhatsApp.</p>
-        <img src="https://via.placeholder.com/100" alt="Booking">
-        <img src="https://via.placeholder.com/100" alt="WhatsApp">
+        <a href="https://www.booking.com/hotel/br/pousada-amp-cafe-catarina.pt.html?tab=4&aid=1636199&label=hotel-3994181_reviews" target="_blank">
+            <img src="https://logos-marcas.com/wp-content/uploads/2021/08/Booking-Emblema.jpg" alt="Booking">
+        </a>
+        <a href="https://wa.me/5548996409053" target="_blank">
+            <img src="https://th.bing.com/th/id/OIP.HH-JtPc9IrqVx-LYrx6kbgHaHJ?rs=1&pid=ImgDetMain" alt="WhatsApp">
+        </a>
         <p>Para mais informações, ligue para (48) 99640-9053 ou envie um e-mail para contato@pousadacatarina.com.br.</p>
     </div>
     <footer>
